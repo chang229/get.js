@@ -78,7 +78,3 @@
 		}
 		return result;
 	};
-	var list = get(".pc",".box");
-	each(list,function(){
-		this.style.background = "red";
-	});
