@@ -78,3 +78,9 @@
 		}
 		return result;
 	};
+// 实现基本选择器：如：
+// get(".box")通过类名选择节点
+// get("#id")通过id选择
+// get("*")选择全部节点
+// get("div")通过标签名选择节点
+// get(".box","div")选择div下的.box节点
