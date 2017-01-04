@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.reset{
+			width: 200px;
+			height: 100px;
+			border: 1px solid pink;
+			margin:10px 0; 
+		}
+	</style>
+</head>
+<body>
+<div>
+<div class="box">
+	<div class="pc reset"></div>
+	<div class="reset" id="style_red"></div>
+	<div class="pc reset"></div>
+	<p class="d reset"></p>
+	<p class="reset"></p>
+	<p class="d reset"></p>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="get.js"></script>
+<script type="text/javascript">
+	(function(window){
+		var list = get('p');
+		each(list,function(){
+			this.style.background = "red";
+		});
+	})(window);
+</script>
+</html>

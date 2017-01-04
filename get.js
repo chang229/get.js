@@ -21,10 +21,10 @@
 	})();
 // 自己封装push方法
 push = {
-	array:function(target,else){
+	apply:function(target,eles){
 		var j = target.length,
 			i = 0;
-		while (target[j++] = else[i++]){ };
+		while (target[j++] = eles[i++]){ };
 		target.length = j - 1; 
 	}
 }
