@@ -19,6 +19,26 @@
 		}
 		return false;
 	})();
+// 自己封装push方法
+push = {
+	array:function(target,else){
+		var j = target.length,
+			i = 0;
+		while (target[j++] = else[i++]){ };
+		target.length = j - 1; 
+	}
+}
+// 检测push方法是否可用
+try{
+	var div = document.createElement("div");
+	div.innerHTML = "<div></div><div></div>";
+	var divs = div.getElementsByTagName("div"),
+		resultes = [];
+	resultes.push.apply(resultes,divs);
+} catch (e){
+	// 不可用时调用自己写的push方法
+	Array.prototype.push = push ;
+};
 // 封装getClassName方法
 	var getClass = function(className,context,result){
 		result = result || [];
